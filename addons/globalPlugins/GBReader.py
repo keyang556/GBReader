@@ -24,7 +24,7 @@ def gboff():
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
   def __init__(self):
-    super(globalPluginHandler.GlobalPlugin, self).__init__()
+    super().__init__()
     global sD, dic
     sD.load(dic)
 
@@ -38,10 +38,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
       return
     if gb:
       gboff()
-      ui.message(_(u"簡體中文報讀關"))
+      ui.message(_("簡體中文報讀關"))
     else:
-      ui.message(_(u"簡體中文報讀開"))
+      ui.message(_("簡體中文報讀開"))
       gbon()
-  script_toggle.__doc__ = _(u"簡體中文報讀開關")
+  script_toggle.__doc__ = _("簡體中文報讀開關")
 
   __gestures = {"kb:NVDA+g":"toggle"}
